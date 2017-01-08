@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="." name="0">
+      <in>Marcador.cpp</in>
+      <in>Marcador.hpp</in>
+      <in>Pala.cpp</in>
+      <in>Pala.hpp</in>
+      <in>Pilota.cpp</in>
+      <in>Pilota.hpp</in>
+      <in>Random.hpp</in>
+      <in>Title.cpp</in>
+      <in>Title.hpp</in>
+      <in>common.hpp</in>
+      <in>main.cpp</in>
+    </df>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>CMakeLists.txt</itemPath>
+      <itemPath>build/Makefile</itemPath>
+      <itemPath>nbproject/private/launcher.properties</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceFolderFilter>^(nbproject)$</sourceFolderFilter>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
+  <projectmakefile>build/Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="0">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>false</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <flagsDictionary>
+        <element flagsID="0" commonFlags="-std=gnu++11"/>
+      </flagsDictionary>
+      <codeAssistance>
+      </codeAssistance>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>build</buildCommandWorkingDir>
+          <buildCommand>${MAKE} -f Makefile</buildCommand>
+          <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
+          <executablePath>build/pong</executablePath>
+          <cTool>
+            <standard>3</standard>
+          </cTool>
+          <ccTool>
+            <standard>8</standard>
+            <incDir>
+              <pElem>build</pElem>
+            </incDir>
+          </ccTool>
+        </makeTool>
+        <preBuild>
+          <preBuildCommandWorkingDir>build</preBuildCommandWorkingDir>
+          <preBuildCommand>${CMAKE} -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C_COMPILER=${IDE_CC} -DCMAKE_CXX_COMPILER=${IDE_CXX} -DCMAKE_C_FLAGS_DEBUG="-g3 -gdwarf-2" -DCMAKE_CXX_FLAGS_DEBUG="-g3 -gdwarf-2" -DCMAKE_EXPORT_COMPILE_COMMANDS=ON ..</preBuildCommand>
+          <preBuildFirst>true</preBuildFirst>
+        </preBuild>
+      </makefileType>
+      <item path="Marcador.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Marcador.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Pala.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="Pala.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Pilota.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Pilota.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Random.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Title.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Title.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="common.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+    </conf>
+    <conf name="Release" type="0">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>false</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <flagsDictionary>
+        <element flagsID="0" commonFlags="-std=gnu++11"/>
+      </flagsDictionary>
+      <codeAssistance>
+      </codeAssistance>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>build</buildCommandWorkingDir>
+          <buildCommand>${MAKE} -f Makefile</buildCommand>
+          <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
+          <executablePath>build/pong</executablePath>
+          <cTool>
+            <standard>3</standard>
+          </cTool>
+          <ccTool>
+            <standard>8</standard>
+            <incDir>
+              <pElem>build</pElem>
+            </incDir>
+          </ccTool>
+        </makeTool>
+        <preBuild>
+          <preBuildCommandWorkingDir>build</preBuildCommandWorkingDir>
+          <preBuildCommand>${CMAKE} -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release -DCMAKE_C_COMPILER=${IDE_CC} -DCMAKE_CXX_COMPILER=${IDE_CXX} -DCMAKE_C_FLAGS_DEBUG="-g3 -gdwarf-2" -DCMAKE_CXX_FLAGS_DEBUG="-g3 -gdwarf-2" -DCMAKE_EXPORT_COMPILE_COMMANDS=ON ..</preBuildCommand>
+          <preBuildFirst>true</preBuildFirst>
+        </preBuild>
+      </makefileType>
+      <item path="Marcador.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Marcador.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Pala.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+      <item path="Pala.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Pilota.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Pilota.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Random.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Title.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Title.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="common.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="main.cpp" ex="false" tool="1" flavor2="8">
+        <ccTool flags="0">
+        </ccTool>
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>
