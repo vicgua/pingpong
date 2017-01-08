@@ -1,7 +1,8 @@
 #include "Title.hpp"
 
 Title::Title() {
-    assert(texture.loadFromFile("assets/images/Title.png"));
+	if (!texture.loadFromFile("assets/images/Title.png"))
+		throw std::runtime_error(no_asset);
     sprite.setTexture(texture);
 }
 

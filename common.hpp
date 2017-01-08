@@ -7,5 +7,6 @@
 
 extern bool paused;
 extern bool show_title;
+extern const char* no_asset;
 
 #endif // COMMON_HPP

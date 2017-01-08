@@ -2,7 +2,7 @@
 #define TITLE_HPP
 
 #include <SFML/Graphics.hpp>
-#include <cassert>
+#include <stdexcept>
 
 #include "common.hpp"
 #include "Marcador.hpp"

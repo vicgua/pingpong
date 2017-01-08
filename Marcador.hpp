@@ -3,7 +3,7 @@
 
 #include <SFML/Graphics.hpp>
 #include <SFML/Window.hpp>
-#include <cassert>
+#include <stdexcept>
 #include <string>
 
 #include "common.hpp"

@@ -3,7 +3,8 @@
 Pilota::Pilota(Marcador* marcador) {
     shape = new sf::CircleShape(RADI);
     shape->setFillColor(sf::Color(51, 204, 51));
-    assert(s_buffer.loadFromFile("assets/sounds/pong.wav"));
+    if (!s_buffer.loadFromFile("assets/sounds/pong.wav"))
+        throw std::runtime_error(no_asset);
     sound.setBuffer(s_buffer);
     this->marcador = marcador;
     ultima_col_j1 = ultima_col_j2 = false;
@@ -63,53 +64,13 @@ void Pilota::move(const Pala& j1, const Pala& j2) {
     if (pos.x + vx + RADI <= 0) {
         vx *= -1;
         marcador->addPuntsJ2();
-        sound.play();
+		reset();
     } else if (pos.x + vx + RADI >= WIDTH) {
         vx *= -1;
         marcador->addPuntsJ1();
-        sound.play();
+		reset();
     }
     
-    /*switch (colisio(j1, vx, vy)) {
-        case NO:
-            // `ultima_col_j*` evita que es quedi "aturada".
-            ultima_col_j1 = NO;
-            break;
-        case LAT:
-            if (ultima_col_j1 != NO)
-                break;
-            ultima_col_j1 = LAT;
-            vy *= -1;
-            sound.play();
-            break;
-        case FRONT:
-            if (ultima_col_j1 != NO)
-                break;
-            ultima_col_j1 = FRONT;
-            vx *= -1;
-            sound.play();
-            break;
-    };
-    switch (colisio(j2, vx, vy)) {
-        case NO:
-            // `ultima_col_j*` evita que es quedi "aturada".
-            ultima_col_j2 = NO;
-            break;
-        case LAT:
-            if (ultima_col_j2 != NO)
-                break;
-            ultima_col_j2 = LAT;
-            vy *= -1;
-            sound.play();
-            break;
-        case FRONT:
-            if (ultima_col_j2 != NO)
-                break;
-            ultima_col_j2 = FRONT;
-            vx *= -1;
-            sound.play();
-            break;
-    };*/
     if (colisio(j1, vx, vy)) {
         if (!ultima_col_j1) {
             ultima_col_j1 = true;

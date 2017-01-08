@@ -4,6 +4,7 @@
 #include <chrono>
 #include <random>
 #include <stdexcept>
+#include <iostream>
 
 class Random {
 public:
@@ -16,8 +17,13 @@ public:
 
     template <typename T = double>
     static T genReal(T min, T max) {
-        std::uniform_real_distribution<T> dist(min, max);
-        return dist(gen);
+		if (min > max) {
+			std::uniform_real_distribution<T> dist(max, min);
+			return dist(gen);
+		} else {
+			std::uniform_real_distribution<T> dist(min, max);
+			return dist(gen);
+		}
     }
 
     static bool genBool(double probTrue = 0.5) {

@@ -2,9 +2,10 @@
 
 Marcador::Marcador() {
     punts_j1 = punts_j2 = 0;
-    assert(font.loadFromFile("assets/fonts/AnonymousPro-Regular.ttf"));
-    assert(font_bold.loadFromFile("assets/fonts/AnonymousPro-Bold.ttf"));
-    t_punts_j1.setFont(font);
+    if (!font.loadFromFile("assets/fonts/AnonymousPro-Regular.ttf"))
+		throw std::runtime_error(no_asset);
+	if (!font_bold.loadFromFile("assets/fonts/AnonymousPro-Bold.ttf"))
+		throw std::runtime_error(no_asset);    t_punts_j1.setFont(font);
     t_punts_j1.setPosition(POS_X, POS_Y);
     t_punts_j1.setFillColor(sf::Color::Black);
     t_punts_j1.setCharacterSize(FONT_SIZE);

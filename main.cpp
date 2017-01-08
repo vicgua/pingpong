@@ -9,6 +9,9 @@
 bool paused;
 bool show_title;
 
+const char* no_asset = "No s'ha pogut carregar un arxiu. Assegura't que "
+	"`assets` està al mateix directori que l'executable";
+
 std::default_random_engine Random::gen;
 
 using kbd = sf::Keyboard; // Alias per a sf::Keyboard

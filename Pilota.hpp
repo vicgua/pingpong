@@ -3,16 +3,14 @@
 
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
-#include <cmath>
-
-#include <chrono>
-#include <random>
-#include "Random.hpp"
-
-#include "Pala.hpp"
-#include "Marcador.hpp"
+#include <stdexcept>
+#define _USE_MATH_DEFINES // Requerit a Windows
+#include <math.h>
 
 #include "common.hpp"
+#include "Random.hpp"
+#include "Pala.hpp"
+#include "Marcador.hpp"
 
 class Pilota {
 public:
