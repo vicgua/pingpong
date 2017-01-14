@@ -23,8 +23,7 @@ void Pilota::render(sf::RenderWindow& window, const Pala& j1, const Pala& j2) {
 void Pilota::reset() {
     double angle;
     do
-        angle = Random::genReal<double>(0, 2 * M_PI);
-    while (angle == M_PI || angle == (3 / 4) * M_PI);
+        angle = Random::genReal<double>(0, 2 * M_PI); while (angle == M_PI || angle == (3 / 4) * M_PI);
     vx = V_0 * cos(angle);
     vy = V_0 * sin(angle);
     shape->setPosition((WIDTH - RADI) / 2, (HEIGHT - RADI) / 2);
@@ -39,7 +38,7 @@ double Pilota::normRad(double a) {
 void Pilota::move(const Pala& j1, const Pala& j2) {
     if (paused) return;
     sf::Vector2<float> pos = shape->getPosition();
-    
+
     if (Random::genBool(0.01)) { // Canvia de velocitat ocasionalment
         double v = sqrt(vx * vx + vy * vy);
         double angle = normRad(atan2(vy, vx));
@@ -50,7 +49,7 @@ void Pilota::move(const Pala& j1, const Pala& j2) {
             vy = v * sin(angle);
         }
     }
-    
+
     // Si es surt, inverteix la direcció
     if (pos.y + vy + RADI <= 0) {
         vy *= -1;
@@ -64,13 +63,13 @@ void Pilota::move(const Pala& j1, const Pala& j2) {
     if (pos.x + vx + RADI <= 0) {
         vx *= -1;
         marcador->addPuntsJ2();
-		reset();
+        reset();
     } else if (pos.x + vx + RADI >= WIDTH) {
         vx *= -1;
         marcador->addPuntsJ1();
-		reset();
+        reset();
     }
-    
+
     if (colisio(j1, vx, vy)) {
         if (!ultima_col_j1) {
             ultima_col_j1 = true;
