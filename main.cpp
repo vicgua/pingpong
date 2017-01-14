@@ -18,7 +18,7 @@ using kbd = sf::Keyboard; // Alias per a sf::Keyboard
 
 int main() {
     sf::RenderWindow window(sf::VideoMode(WIDTH, HEIGHT),
-            "PONG");
+            "PING-PONG");
     window.setKeyRepeatEnabled(false);
     Random::init();
     Title title;

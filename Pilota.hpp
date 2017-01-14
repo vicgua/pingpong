@@ -33,7 +33,7 @@ private:
     void move(const Pala& j1, const Pala& j2);
     bool colisio(const Pala& jugador, double vx, double vy);
     constexpr static double V_0 = 0.05;
-    constexpr static double A = 5e-6;
+    constexpr static double A = 3e-5;
     constexpr static double V_MAX = 0.15;
     constexpr static float RADI = 10;
     double vx;
