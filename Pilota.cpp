@@ -39,7 +39,7 @@ void Pilota::move(const Pala& j1, const Pala& j2) {
     if (paused) return;
     sf::Vector2<float> pos = shape->getPosition();
 
-    if (Random::genBool(0.01)) { // Canvia de velocitat ocasionalment
+    if (Random::genBool(0.1)) { // Canvia de velocitat ocasionalment
         double v = sqrt(vx * vx + vy * vy);
         double angle = normRad(atan2(vy, vx));
         double a = Random::genReal(1.2 * A, -A); // Accelera més que frena
